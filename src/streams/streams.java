@@ -13,7 +13,9 @@ public class streams {
 		//find the duplicatess
 		//lname.stream().filter(y->y.length()>0).forEach().;
 		System.out.println(lname.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));
+		//System.out.println(lname.stream().collect(Collectors.(Function.identity(),Collectors.counting())));
 		System.out.println(lname.stream().filter(x->x.equals("sathamhussain")).count());
+		System.out.println(lname.stream().filter(x->Collections.frequency(lname,x)>1).collect(Collectors.toSet()));
 
 	}
 
